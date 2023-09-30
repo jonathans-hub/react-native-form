@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function App() {
   const objc = {
-    email: "example@email.com",
+    username: "",
     password: "",
   };
   const [state, setState] = useState(objc);
@@ -15,11 +15,11 @@ export default function App() {
         // secureTextEntry={true}
         autoCorrect={false}
         autoCapitalize="none"
-        placeholder="Email"
-        value={state.email}
-        onChangeText={(email) => {
-          setState({ email });
-          console.log(state.email);
+        placeholder="username"
+        value={state.username}
+        onChangeText={(username) => {
+          setState({ username });
+          console.log(state.username);
         }}
       />
       <TextInput
@@ -27,7 +27,7 @@ export default function App() {
         secureTextEntry={true}
         autoCorrect={false}
         autoCapitalize="none"
-        placeholder="Password"
+        placeholder="password"
         value={state.password}
         onChangeText={(password) => {
           setState({ password });
